@@ -29,6 +29,9 @@ jobs:
           # --output=none prints files which needs to be formatted
           - name: Verify formatting
             run: dart format --output=none --set-exit-if-changed .
+
+          - name: Run flutter tests
+            run: flutter test
           
           # Checks your project for code issues, potential errors, and enforces best practices.
           - name: Analyze project source
